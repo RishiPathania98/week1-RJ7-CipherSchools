@@ -17,3 +17,37 @@ function demoFunction(){
 }
 
 demoFunction();
+
+Props Example:
+
+
+import './App.css';
+
+function App() {
+  // const name = <h1>Rishi Pathania</h1>
+  // const age = <h2>20</h2>
+  // const email = <h3>rishipathania98@gmail.com</h3>
+  const age = 20;
+  return (
+    <div className="App">
+      {name}
+      {age}
+      {email}
+      <UserComponent name="Rishi" age={21} email="rishipathania98@gmail.com"/>
+      <UserComponent name="Abhishek Thakur" age={20} email="shekki12345@gmail.com" />
+
+
+    </div>
+  );
+}
+const UserComponent =(props) =>{
+  return(
+    <div>
+      <h1>{props.name}</h1>
+      <h2>{props.age}</h2>
+      <h3>{props.email}</h3>
+    </div>
+  );
+}
+
+export default App;
